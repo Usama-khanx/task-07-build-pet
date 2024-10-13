@@ -36,7 +36,7 @@ var pet = {
     option: function(){
       
 
-            var select = +prompt(`What would you like to do with ${this.name}? chose an option`)
+            var select = +prompt(`What would you like to do with ${this.name}? chose an option 1.feed 2.play 3.agePet`)
             
             
         if(select === 1){
