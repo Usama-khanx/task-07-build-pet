@@ -31,10 +31,24 @@ var pet = {
         this.hunger += 10;
 
         alert(`${this.name} age is ${this.age} and Happy is ${this.happiness} and Hungry is ${this.hunger}`)
+    },
+
+    option: function(){
+      
+
+            var select = +prompt(`What would you like to do with ${this.name}? chose an option`)
+            
+            
+        if(select === 1){
+            this.feed();
+        }else if(select === 2){
+            this.play();
+        }else if(select === 3){
+            this.agePet();
+        }
     }
 }
 
+
 console.log("Hello")
-pet.feed();
-pet.play();
-pet.agePet();
+pet.option();
