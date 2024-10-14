@@ -30,25 +30,33 @@ var pet = {
         this.happiness -= 5;
         this.hunger += 10;
 
+        if(this.happiness < 0) this.happiness = 0;
+        if(this.hunger > 100) this.hunger = 100;
+
         alert(`${this.name} age is ${this.age} and Happy is ${this.happiness} and Hungry is ${this.hunger}`)
     },
 
     option: function(){
       
 
-            var select = +prompt(`What would you like to do with ${this.name}? chose an option 1.feed 2.play 3.agePet`)
+        while(true){
+            var select = +prompt(`What would you like to do with ${this.name}? chose an option\n 1.feed \n 2.play \n 3.agePet`)
             
-            
-        if(select === 1){
-            this.feed();
-        }else if(select === 2){
-            this.play();
-        }else if(select === 3){
-            this.agePet();
+
+                if(select === 1){
+                    this.feed();
+                }else if(select === 2){
+                    this.play();
+                }else if(select === 3){
+                    this.agePet();
+                }
+                else{
+                    break;
+                }
+            }
         }
-    }
 }
 
 
-console.log("Hello")
+
 pet.option();
